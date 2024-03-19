@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- FONT -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Madimi+One&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!--  -->
+
+    <!-- ICON -->
+    <script src="https://unpkg.com/feather-icons"></script>
+    <!--  -->
+    <title>HITBAR</title>
+    <link rel="stylesheet" href="page.css" />
+  </head>
+  <body>
+    <!-- HEADER PART -->
+    <header>
+      <h1>HITBAR</h1>
+      <p>Persegi panjang</p>
+      <nav>
+        <button>Back</button>
+        <div class="navbar">
+          <a href="#kalkulator">Kalkulator</a>
+          <a href="#penjelasan">Penjelasan</a>
+          <a href="#history"><i data-feather="clock"></i></a>
+        </div>
+      </nav>
+    </header>
+    <!--  -->
+
+    <!-- MAIN part -->
+    <main>
+      <section id="kalkulator">
+        <div class="keliling">
+          <h3>Keliling Persegi panjang</h3>
+          <p>
+            Rumus :
+            <br />
+            K = 2 x (p + l)
+          </p>
+          <input type="text" placeholder="Input nilai p / l" />
+          <input type="text" placeholder="Input nilai l / p" />
+          <button>Hitung</button>
+          <p>Hasil : <span></span></p>
+        </div>
+        <div class="luas">
+          <h3>Luas Persegi panjang</h3>
+          <p>
+            Rumus :
+            <br />
+            L = p x l
+          </p>
+          <input type="text" placeholder="Input nilai p / l" />
+          <input type="text" placeholder="Input nilai l / p" />
+          <button>Hitung</button>
+          <p>Hasil : <span></span></p>
+        </div>
+      </section>
+
+      <section id="penjelasan">
+        <div class="img">
+          <img
+            src="https://xfry-1270.github.io/Hitbar/asset/persegi panjang.jpg"
+            alt="persegi panjang"
+          />
+        </div>
+        <div class="artikel">
+          <h2>Persegi panjang</h2>
+          <p>
+            Persegi panjang adalah salah satu bentuk geometri dua dimensi yang
+            memiliki sisi-sisi yang berlawanan sejajar dan panjangnya berbeda.
+            Bentuk persegi panjang seringkali ditemui dalam kehidupan
+            sehari-hari dan memiliki beragam aplikasi dalam berbagai bidang,
+            mulai dari arsitektur hingga matematika dan ilmu fisika.
+          </p>
+          <h4>Definisi Persegi panjang</h4>
+          <p>
+            Persegi panjang dapat didefinisikan sebagai bangun datar yang
+            memiliki dua pasang sisi sejajar yang memiliki panjang yang sama dan
+            empat sudut yang semuanya merupakan sudut siku-siku. Dalam persegi
+            panjang, panjang dua sisi yang sejajar tersebut biasanya disebut
+            sebagai panjang dan lebar persegi panjang.
+          </p>
+          <h4>Sifat-sifat Persegi panjang</h4>
+          <ul>
+            <li>
+              <span>Sudut Siku-siku : </span>Keempat sudut dalam persegi panjang
+              adalah sudut-sudut siku-siku, yang berarti memiliki ukuran 90
+              derajat.
+            </li>
+            <li>
+              <span>Panjang dan Lebar : </span>Persegi panjang memiliki dua
+              panjang sisi yang sejajar dan dua lebar sisi yang sejajar. Panjang
+              dua sisi yang sejajar biasanya berbeda.
+            </li>
+            <li>
+              <span>Diagonal : </span>Panjang diagonal persegi panjang dapat
+              dihitung menggunakan rumus Pythagoras
+            </li>
+          </ul>
+          <h4>Contoh Penerapan Persegi panjang</h4>
+          <ul>
+            <li>Arsitektur</li>
+            <li>Konstruksi</li>
+            <li>Matematika</li>
+            <li>Teknik</li>
+            <li>Ilmu Fisika</li>
+          </ul>
+          <h4>Kesimpulan</h4>
+          <p>
+            Persegi panjang adalah salah satu bentuk geometri yang sederhana
+            namun penting, dengan aplikasi yang luas dalam berbagai aspek
+            kehidupan sehari-hari dan ilmu pengetahuan. Dengan memahami
+            sifat-sifatnya, kita dapat menggunakannya secara efektif dalam
+            pemodelan, perencanaan, dan penyelesaian masalah.
+          </p>
+          <h4>Noted Rumus</h4>
+          <p>
+            K = Keliling
+            <br />
+            L = Luas
+            <br />
+            P = Panjang
+            <br />
+            L = Lebar
+          </p>
+        </div>
+      </section>
+      <section id="history">
+        <button>Remove history</button>
+        <div class="history"></div>
+      </section>
+    </main>
+    <!--  -->
+
+    <footer>
+      <p>
+        Created by
+        <a
+          href="https://www.instagram.com/fery.ramdania?igsh=MWhwZG96eHQxczZq"
+          target="_blank"
+          >Fery Ramdania.</a
+        >
+        | &copy; 2024.
+      </p>
+    </footer>
+    <script>
+      // ICON
+      feather.replace();
+      // -----
+
+      // BACK
+      document.querySelector("nav button").onclick = function () {
+        location.href = "https://xfry-1270.github.io/Hitbar/main/main.html";
+      };
+      // -----
+
+      // HISTORY
+      var memo = document.querySelector("#history .history");
+      var btnmemo = document.querySelector("#history button");
+      //-----
+
+      window.onload = function () {
+        var addmemo = localStorage.getItem("memo");
+        if (addmemo) {
+          memo.innerHTML = addmemo;
+        } else {
+          localStorage.removeItem("memo");
+        }
+      };
+
+      var inputKeliling = document.querySelectorAll(".keliling input");
+      var btnKeliling = document.querySelector(".keliling button");
+      var hasilKeliling = document.querySelector(".keliling span");
+      // KELILING
+      btnKeliling.onclick = function () {
+        if (inputKeliling[0].value === "" || inputKeliling[1].value === "") {
+          alert("Isi input dengan nilai");
+        } else {
+          var angka1 = Number(inputKeliling[0].value);
+          var angka2 = Number(inputKeliling[1].value);
+          var resultAngka = angka1 + angka2;
+          var lastResult = 2 * resultAngka;
+          const regex = /\d+/;
+          if (!regex.test(lastResult)) {
+            alert("Input Nilai Bilangannya saja");
+          } else {
+            var memories = (hasilKeliling.textContent =
+              "2 x (" +
+              angka1 +
+              "+" +
+              angka2 +
+              ") = 2 x " +
+              resultAngka +
+              " = " +
+              lastResult);
+            inputKeliling[0].value = "";
+            inputKeliling[1].value = "";
+            var existingHTML = memo.innerHTML;
+            var newMemo =
+              `<div>History Keliling Persegi panjang <p><input type='checkbox' /> <span>${memories}</span></p></div>` +
+              existingHTML;
+            memo.innerHTML = newMemo;
+            localStorage.setItem("memo", memo.innerHTML);
+          }
+        }
+      };
+      // -----
+
+      // LUAS
+      var inputLuas = document.querySelectorAll(".luas input");
+      var btnLuas = document.querySelector(".luas button");
+      var hasilLuas = document.querySelector(".luas span");
+
+      btnLuas.onclick = function () {
+        if (inputLuas[0].value === "" || inputLuas[1].value === "") {
+          alert("Isi input dengan nilai");
+        } else {
+          var angka1 = Number(inputLuas[0].value);
+          var angka2 = Number(inputLuas[1].value);
+          var result = angka1 * angka2;
+          const regex = /\d+/;
+          if (!regex.test(result)) {
+            alert("Input Nilai Bilangannya saja");
+          } else {
+            var memories = (hasilLuas.textContent =
+              angka1 + " x " + angka2 + " = " + result);
+            inputLuas[0].value = "";
+            inputLuas[1].value = "";
+            var existingHTML = memo.innerHTML;
+            var newMemo =
+              `<div>History Luas Persegi panjang <p><input type='checkbox' /> <span>${memories}</span></p></div>` +
+              existingHTML;
+            memo.innerHTML = newMemo;
+            localStorage.setItem("memo", memo.innerHTML);
+          }
+        }
+      };
+      // -----
+
+      // DELETE HISTORY
+      btnmemo.onclick = function () {
+        var checkbox = document.querySelectorAll(
+          ".history input[type='checkbox']:checked"
+        );
+        if (checkbox.length === 0) {
+          alert("Pilih history yang mau dihapus terlebih dahulu 👌");
+        } else {
+          checkbox.forEach(function (cek) {
+            var delmemo = cek.closest("div");
+            delmemo.remove();
+          });
+          localStorage.setItem("memo", memo.innerHTML);
+        }
+      };
+
+      // VALIDASI INPUT
+      inputKeliling[0].addEventListener("keyup", function regcek() {
+        const regex = /,/;
+        if (regex.test(inputKeliling[0].value)) {
+          alert("untuk tanda koma ( , ) ubah jadi titik ( . )");
+        }
+      });
+
+      inputKeliling[1].addEventListener("keyup", function regcek() {
+        const regex = /,/;
+        if (regex.test(inputKeliling[1].value)) {
+          alert("untuk tanda koma ( , ) ubah jadi titik ( . )");
+        }
+      });
+
+      inputLuas[0].addEventListener("keyup", function regcek() {
+        const regex = /,/;
+        if (regex.test(inputLuas[0].value)) {
+          alert("untuk tanda koma ( , ) ubah jadi titik ( . )");
+        }
+      });
+
+      inputLuas[1].addEventListener("keyup", function regcek() {
+        const regex = /,/;
+        if (regex.test(inputLuas[1].value)) {
+          alert("untuk tanda koma ( , ) ubah jadi titik ( . )");
+        }
+      });
+    </script>
+  </body>
+</html>

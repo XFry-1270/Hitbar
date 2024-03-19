@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- FONT -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Madimi+One&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!--  -->
+
+    <!-- ICON -->
+    <script src="https://unpkg.com/feather-icons"></script>
+    <!--  -->
+
+    <title>HITBAR</title>
+    <link rel="stylesheet" href="page.css" />
+  </head>
+  <body>
+    <!-- HEADER PART -->
+    <header>
+      <h1>HITBAR</h1>
+      <p>Segitiga sama sisi</p>
+      <nav>
+        <button>Back</button>
+        <div class="navbar">
+          <a href="#kalkulator">Kalkulator</a>
+          <a href="#penjelasan">Penjelasan</a>
+          <a href="#history"><i data-feather="clock"></i></a>
+        </div>
+      </nav>
+    </header>
+    <!--  -->
+
+    <!-- MAIN part -->
+    <main>
+      <section id="kalkulator">
+        <div class="keliling">
+          <h3>Keliling Segitiga sama sisi</h3>
+          <p>
+            Rumus :
+            <br />
+            K = 3 x s
+          </p>
+          <input type="text" placeholder="Input nilai s " />
+          <button>Hitung</button>
+          <p>Hasil : <span></span></p>
+        </div>
+        <div class="luas">
+          <h3>Luas Segitiga sama sisi</h3>
+          <p>
+            Rumus :
+            <br />
+            L = <sup>1</sup>/<sub>2</sub> x a x t
+          </p>
+          <input type="text" placeholder="Input nilai a / t" />
+          <input type="text" placeholder="Input nilai t / a" />
+          <button>Hitung</button>
+          <p>Hasil : <span></span></p>
+        </div>
+      </section>
+
+      <section id="penjelasan">
+        <div class="img">
+          <img
+            src="https://xfry-1270.github.io/Hitbar/asset/segitiga samasisi.webp"
+            alt="persegi panjang"
+          />
+        </div>
+        <div class="artikel">
+          <h2>Segitiga sama sisi</h2>
+          <p>
+            Segitiga sama sisi adalah salah satu jenis segitiga yang memiliki
+            sisi-sisinya memiliki panjang yang sama. Segitiga ini memiliki
+            sifat-sifat khusus yang membedakannya dari segitiga lainnya dan
+            memiliki berbagai aplikasi dalam matematika, fisika, dan bidang
+            lainnya.
+          </p>
+          <h4>Definisi Segitiga sama sisi</h4>
+          <p>
+            Segitiga sama sisi adalah segitiga yang memiliki ketiga sisinya
+            memiliki panjang yang sama. Hal ini berarti bahwa semua sudut di
+            dalam segitiga ini juga memiliki ukuran yang sama, yaitu 60 derajat.
+          </p>
+          <h4>Sifat-sifat Segitiga Sama Sisi</h4>
+          <ul>
+            <li>
+              <span>Sisi-sisi Sama Panjang : </span>Ketiga sisi segitiga
+              memiliki panjang yang sama.
+            </li>
+            <li>
+              <span>Sudut-sudut Sama Besar : </span>Ketiga sudut di dalam
+              segitiga memiliki ukuran yang sama, yaitu 60 derajat.
+            </li>
+          </ul>
+          <h4>Contoh Penerapan Persegi panjang</h4>
+          <ul>
+            <li>Geometri</li>
+            <li>Konstruksi</li>
+            <li>Matematika</li>
+            <li>Ilmu Fisika</li>
+          </ul>
+          <h4>Kesimpulan</h4>
+          <p>
+            Segitiga sama sisi adalah salah satu bentuk geometri yang sederhana
+            namun penting, dengan berbagai sifat dan aplikasi yang menarik.
+            Dengan memahami sifat-sifatnya, kita dapat menggunakan segitiga sama
+            sisi secara efektif dalam berbagai bidang ilmu pengetahuan dan
+            kehidupan sehari-hari.
+          </p>
+          <h4>Noted Rumus</h4>
+          <p>
+            K = Keliling
+            <br />
+            L = Luas
+            <br />
+            a = alas
+            <br />
+            t = tinggi
+            <br />
+            s = sisi
+          </p>
+        </div>
+      </section>
+      <section id="history">
+        <button>Remove history</button>
+        <div class="history"></div>
+      </section>
+    </main>
+    <!--  -->
+
+    <footer>
+      <p>
+        Created by
+        <a
+          href="https://www.instagram.com/fery.ramdania?igsh=MWhwZG96eHQxczZq"
+          target="_blank"
+          >Fery Ramdania.</a
+        >
+        | &copy; 2024.
+      </p>
+    </footer>
+    <script>
+      // ICON
+      feather.replace();
+      // -----
+
+      // BACK
+      document.querySelector("nav button").onclick = function () {
+        location.href = "https://xfry-1270.github.io/Hitbar/main/main.html";
+      };
+      // ----
+
+      // HISTORY
+      var memo = document.querySelector("#history .history");
+      var btnmemo = document.querySelector("#history button");
+      //-----
+
+      window.onload = function () {
+        var addmemo = localStorage.getItem("memo");
+        if (addmemo) {
+          memo.innerHTML = addmemo;
+        } else {
+          localStorage.removeItem("memo");
+        }
+      };
+
+      var inputKeliling = document.querySelector(".keliling input");
+      var btnKeliling = document.querySelector(".keliling button");
+      var hasilKeliling = document.querySelector(".keliling span");
+      // KELILING
+      btnKeliling.onclick = function () {
+        if (inputKeliling.value === "") {
+          alert("Isi input dengan nilai");
+        } else {
+          var angka = Number(inputKeliling.value);
+          var resultAngka = 3 * angka;
+          const regex = /\d+/;
+          if (!regex.test(resultAngka)) {
+            alert("Input Nilai Bilangannya saja");
+          } else {
+            var memories = (hasilKeliling.textContent =
+              "3 x " + angka + " = " + resultAngka);
+            inputKeliling.value = "";
+            var existingHTML = memo.innerHTML;
+            var newMemo =
+              `<div>History Keliling Segitiga sama sisi <p><input type='checkbox' /> <span>${memories}</span></p></div>` +
+              existingHTML;
+            memo.innerHTML = newMemo;
+            localStorage.setItem("memo", memo.innerHTML);
+          }
+        }
+      };
+      // -----
+
+      // LUAS
+      var inputLuas = document.querySelectorAll(".luas input");
+      var btnLuas = document.querySelector(".luas button");
+      var hasilLuas = document.querySelector(".luas span");
+
+      btnLuas.onclick = function () {
+        if (inputLuas[0].value === "" || inputLuas[1].value === "") {
+          alert("Isi input dengan nilai");
+        } else {
+          var angka1 = Number(inputLuas[0].value);
+          var angka2 = Number(inputLuas[1].value);
+          var result = (1 / 2) * angka1 * angka2;
+          const regex = /\d+/;
+          if (!regex.test(result)) {
+            alert("Input Nilai Bilangannya saja");
+          } else {
+            var memories = (hasilLuas.textContent =
+              "\u00B9" +
+              "\u2044" +
+              "\u2082" +
+              " x " +
+              angka1 +
+              " x " +
+              angka2 +
+              " = " +
+              result);
+            inputLuas[0].value = "";
+            inputLuas[1].value = "";
+            var existingHTML = memo.innerHTML;
+            var newMemo =
+              `<div>History Luas Segitiga sama sisi <p><input type='checkbox' /> <span>${memories}</span></p></div>` +
+              existingHTML;
+            memo.innerHTML = newMemo;
+            localStorage.setItem("memo", memo.innerHTML);
+          }
+        }
+      };
+      // -----
+
+      // DELETE HISTORY
+      btnmemo.onclick = function () {
+        var checkbox = document.querySelectorAll(
+          ".history input[type='checkbox']:checked"
+        );
+
+        if (checkbox.length === 0) {
+          alert("Pilih history yang mau dihapus terlebih dahulu 👌");
+        } else {
+          checkbox.forEach(function (cek) {
+            var delmemo = cek.closest("div");
+            delmemo.remove();
+          });
+          localStorage.setItem("memo", memo.innerHTML);
+        }
+      };
+
+      // VALIDASI INPUT
+
+      inputKeliling.addEventListener("keyup", function regcek() {
+        const regex = /,/;
+        if (regex.test(inputKeliling.value)) {
+          alert("untuk tanda koma ( , ) ubah jadi titik ( . )");
+        }
+      });
+
+      inputLuas[0].addEventListener("keyup", function regcek() {
+        const regex = /,/;
+        if (regex.test(inputLuas[0].value)) {
+          alert("untuk tanda koma ( , ) ubah jadi titik ( . )");
+        }
+      });
+
+      inputLuas[1].addEventListener("keyup", function regcek() {
+        const regex = /,/;
+        if (regex.test(inputLuas[1].value)) {
+          alert("untuk tanda koma ( , ) ubah jadi titik ( . )");
+        }
+      });
+    </script>
+  </body>
+</html>
