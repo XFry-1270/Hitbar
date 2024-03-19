@@ -1,38 +1,280 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>HITBAR</title>
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-      body {
-        width: 100%;
-        height: 100vh;
-        display: flex;
-        flex-direction: column;
-        gap: 0.5rem;
-        justify-content: center;
-        align-items: center;
-        font-family: sans-serif;
-        background-color: #15f5ba;
-        color: white;
-      }
-      a {
-        font-weight: bold;
-        text-decoration: none;
-      }
-      a:hover {
-        color: salmon;
-      }
-    </style>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- FONT -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Madimi+One&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Poppins&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap"
+    rel="stylesheet"
+  />
+  <!--  -->
+
+  <!-- ICON -->
+  <script src="https://unpkg.com/feather-icons"></script>
+  <!--  -->
+  <title>HITBAR</title>
+  <link rel="stylesheet" href="page.css" />
   </head>
   <body>
-    <h1>COMING SOON</h1>
-    <a href="https://xfry-1270.github.io/Hitbar/main/main.html">B A C K</a>
+    <!-- HEADER PART -->
+    <header>
+      <h1>HITBAR</h1>
+      <p>Lingkaran</p>
+      <nav>
+        <button>Back</button>
+        <div class="navbar">
+          <a href="#kalkulator">Kalkulator</a>
+          <a href="#penjelasan">Penjelasan</a>
+          <a href="#history"><i data-feather="clock"></i></a>
+        </div>
+      </nav>
+    </header>
+    <!--  -->
+
+    <!-- MAIN part -->
+    <main>
+      <section id="kalkulator">
+        <div class="keliling">
+          <h3>Keliling Lingkaran</h3>
+          <p>
+            Rumus :
+            <br />
+            K = 2π x r
+          </p>
+          <input type="text" placeholder="Input nilai r" />
+          <button>Hitung</button>
+          <p>Hasil : <span></span></p>
+        </div>
+        <div class="luas">
+          <h3>Luas Lingkaran</h3>
+          <p>
+            Rumus :
+            <br />
+            <i>A</i> = πr<sup>2</sup>
+          </p>
+          <input type="text" placeholder="Input nilai r" />
+          <button>Hitung</button>
+          <p>Hasil : <span></span></p>
+        </div>
+      </section>
+
+      <section id="penjelasan">
+        <div class="img">
+          <img
+            src="https://xfry-1270.github.io/Hitbar/asset/lingkaran.png"
+            alt="lingkaran"
+          />
+        </div>
+        <div class="artikel">
+          <h2>Lingkaran</h2>
+          <p>
+            Lingkaran adalah salah satu bentuk geometris dasar yang memiliki
+            beragam aplikasi dalam matematika, ilmu fisika, teknik, dan banyak
+            bidang lainnya. Dalam artikel ini, kita akan menjelaskan secara
+            detail tentang lingkaran, termasuk definisi, sifat-sifat, dan
+            penggunaannya dalam kehidupan sehari-hari.
+          </p>
+          <h4>Definisi Lingkaran</h4>
+          <p>
+            Secara matematis, lingkaran didefinisikan sebagai himpunan semua
+            titik dalam bidang yang berjarak sama dari titik tertentu yang
+            disebut pusat lingkaran. Jarak ini, yang sama untuk semua titik
+            dalam lingkaran, disebut jari-jari lingkaran. Lingkaran sering
+            dilambangkan dengan simbol "O" untuk menunjukkan pusatnya, dan
+            <i>r</i>
+            untuk menunjukkan jari-jarinya.
+          </p>
+          <h4>Sifat-sifat Lingkaran</h4>
+          <ul>
+            <li>
+              <span>Diameter : </span>Diameter lingkaran adalah garis lurus yang
+              melintasi lingkaran melewati pusatnya. Panjang diameter adalah dua
+              kali panjang jari-jari.
+            </li>
+            <li>
+              <span>Hubungan Antara Diameter dan Jari-Jari : </span>Diameter
+              adalah dua kali panjang jari-jari. Dengan kata lain, <i>d</i> =
+              <i>2r</i>.
+            </li>
+            <li>
+              <span>Hubungan Antara Diameter dan Keliling : </span>Keliling
+              lingkaran adalah tiga belas dari diameter. Dengan kata lain,
+              <i>K</i>=<i>πd</i> .
+            </li>
+          </ul>
+          <h4>Contoh Penerapan Lingkaran</h4>
+          <ul>
+            <li>Konstruksi Bangunan</li>
+            <li>Ilmu Pengetahuan Alam</li>
+            <li>Matematika</li>
+            <li>Teknologi</li>
+          </ul>
+          <h4>Kesimpulan</h4>
+          <p>
+            Lingkaran adalah bentuk geometris yang penting dan umum digunakan
+            dalam berbagai bidang kehidupan. Dengan memahami sifat-sifat dan
+            penggunaannya, kita dapat menghargai peran penting yang dimainkan
+            oleh lingkaran dalam ilmu pengetahuan dan teknologi modern. Dengan
+            pengetahuan tentang lingkaran, kita dapat memecahkan berbagai
+            masalah matematika dan menerapkannya dalam kehidupan sehari-hari
+            dengan lebih baik.
+          </p>
+          <h4>Noted Rumus</h4>
+          <p>
+            K = Keliling
+            <br />
+            <i>A</i> = Simbol yang digunakan untuk merepresentasikan luas
+            lingkaran.
+            <br />
+            r = jari-jari
+            <br />
+            π = konstanta matematis yang kurang lebih bernilai 3,14.
+          </p>
+        </div>
+      </section>
+      <section id="history">
+        <button>Remove history</button>
+        <div class="history"></div>
+      </section>
+    </main>
+    <!--  -->
+
+    <footer>
+      <p>
+        Created by
+        <a
+          href="https://www.instagram.com/fery.ramdania?igsh=MWhwZG96eHQxczZq"
+          target="_blank"
+          >Fery Ramdania.</a
+        >
+        | &copy; 2024.
+      </p>
+    </footer>
+    <script>
+      // ICON
+      feather.replace();
+      // -----
+
+      // BACK
+      document.querySelector("nav button").onclick = function () {
+        location.href = "https://xfry-1270.github.io/Hitbar/main/main.html";
+      };
+      // -----
+
+      // HISTORY
+      var memo = document.querySelector("#history .history");
+      var btnmemo = document.querySelector("#history button");
+      //-----
+
+      window.onload = function () {
+        var addmemo = localStorage.getItem("memo");
+        if (addmemo) {
+          memo.innerHTML = addmemo;
+        } else {
+          localStorage.removeItem("memo");
+        }
+      };
+
+      var inputKeliling = document.querySelector(".keliling input");
+      var btnKeliling = document.querySelector(".keliling button");
+      var hasilKeliling = document.querySelector(".keliling span");
+      // KELILING
+      btnKeliling.onclick = function () {
+        if (inputKeliling.value === "") {
+          alert("Isi input dengan nilai");
+        } else {
+          var angka = Number(inputKeliling.value);
+          var lastResult = 2 * 3.14 * angka;
+          const regex = /\d+/;
+          if (!regex.test(lastResult)) {
+            alert("Input Nilai Bilangannya saja");
+          } else {
+            var memories = (hasilKeliling.textContent =
+              "2 x 3,14 x " + angka + " = " + lastResult);
+            inputKeliling.value = "";
+            var existingHTML = memo.innerHTML;
+            var newMemo =
+              `<div>History Keliling Lingkaran <p><input type='checkbox' /> <span>${memories}</span></p></div>` +
+              existingHTML;
+            memo.innerHTML = newMemo;
+            localStorage.setItem("memo", memo.innerHTML);
+          }
+        }
+      };
+      // -----
+
+      // LUAS
+      var inputLuas = document.querySelector(".luas input");
+      var btnLuas = document.querySelector(".luas button");
+      var hasilLuas = document.querySelector(".luas span");
+
+      btnLuas.onclick = function () {
+        if (inputLuas.value === "") {
+          alert("Isi input dengan nilai");
+        } else {
+          var angka = Number(inputLuas.value);
+          var result = angka * angka;
+          var lastResult = 3.14 * result;
+          const regex = /\d+/;
+          if (!regex.test(lastResult)) {
+            alert("Input Nilai Bilangannya saja");
+          } else {
+            var memories = (hasilLuas.textContent =
+              "3,14 x " +
+              angka +
+              "\u00B2 = 3,14 x " +
+              result +
+              " = " +
+              lastResult);
+            inputLuas.value = "";
+            var existingHTML = memo.innerHTML;
+            var newMemo =
+              `<div>History Luas Lingkaran <p><input type='checkbox' /> <span>${memories}</span></p></div>` +
+              existingHTML;
+            memo.innerHTML = newMemo;
+            localStorage.setItem("memo", memo.innerHTML);
+          }
+        }
+      };
+      // -----
+
+      // DELETE HISTORY
+      btnmemo.onclick = function () {
+        var checkbox = document.querySelectorAll(
+          ".history input[type='checkbox']:checked"
+        );
+        if (checkbox.length === 0) {
+          alert("Pilih history yang mau dihapus terlebih dahulu 👌");
+        } else {
+          checkbox.forEach(function (cek) {
+            var delmemo = cek.closest("div");
+            delmemo.remove();
+          });
+          localStorage.setItem("memo", memo.innerHTML);
+        }
+      };
+
+      // VALIDASI INPUT
+      inputKeliling.addEventListener("keyup", function regcek() {
+        const regex = /,/;
+        if (regex.test(inputKeliling.value)) {
+          alert("untuk tanda koma ( , ) ubah jadi titik ( . )");
+        }
+      });
+
+      inputLuas.addEventListener("keyup", function regcek() {
+        const regex = /,/;
+        if (regex.test(inputLuas[0].value)) {
+          alert("untuk tanda koma ( , ) ubah jadi titik ( . )");
+        }
+      });
+    </script>
   </body>
 </html>
