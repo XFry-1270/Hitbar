@@ -11,3 +11,8 @@ HITBAR adalah sebuah web yang dapat membantu untuk menghitung luas ,keliling dan
   🛑 Update 1.0
 
   - Unlock page LINGKARAN
+
+  🛑 Update 1.1
+
+  - Unlock page JAJAR GENJANG
+  - Add new fitur kalkulator page PERSEGI : "Mencari sisi berdasarkan Luas & Keliling"

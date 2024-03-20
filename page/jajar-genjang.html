@@ -1,38 +1,327 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>HITBAR</title>
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- FONT -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Madimi+One&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Poppins&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap"
+    rel="stylesheet"
+  />
+  <!--  -->
+
+  <!-- ICON -->
+  <script src="https://unpkg.com/feather-icons"></script>
+  <!--  -->
+  <title>HITBAR</title>
+  <link rel="stylesheet" href="page.css" />
+</head>
+<body>
+   <!-- HEADER PART -->
+   <header>
+    <h1>HITBAR</h1>
+    <p>Jajar genjang</p>
+    <nav>
+      <button>Back</button>
+      <div class="navbar">
+        <a href="#kalkulator">Kalkulator</a>
+        <a href="#penjelasan">Penjelasan</a>
+        <a href="#history"><i data-feather="clock"></i></a>
+      </div>
+    </nav>
+  </header>
+  <!--  -->
+
+  <!-- MAIN part -->
+  <main>
+    <section id="kalkulator">
+      <div class="keliling jajar">
+        <h3>Keliling Jajar genjang</h3>
+        <p>
+          Rumus :
+          <br />
+          K = s + s + s + s
+        </p>
+        <input type="text" placeholder="Nilai sisi" />
+        <input type="text" placeholder="Nilai sisi" />
+        <input type="text" placeholder="Nilai sisi" />
+        <input type="text" placeholder="Nilai sisi" />
+
+        <button>Hitung</button>
+        <p>Hasil : <span></span></p>
+      </div>
+      <div class="luas">
+        <h3>Luas Jajar genjang</h3>
+        <p>
+          Rumus :
+          <br />
+          L = a x t
+        </p>
+        <input type="text" placeholder="Nilai a / t" />
+        <input type="text" placeholder="Nilai a / t" />
+        <button>Hitung</button>
+        <p>Hasil : <span></span></p>
+      </div>
+    </section>
+
+    <section id="penjelasan">
+      <div class="img">
+        <img
+          src="https://xfry-1270.github.io/Hitbar/asset/jajargenjang.png"
+          alt="Jajar genjang"
+        />
+      </div>
+      <div class="artikel">
+        <h2>Jajar genjang</h2>
+        <p>
+          Bangun datar yang satu ini memiliki bentuk segiempat dengan sisi
+          yang berhadapan sejajar dan sama panjang serta empat buah sudut yang
+          sama besar.
+          <br />
+          Jika diamati sekilas, bangun datar jajar genjang memang memiliki
+          bentuk yang mirip dengan persegi panjang atau belah ketupat. Akan
+          tetapi, sifat-sifat yang dimiliki oleh bangun datar jajar genjang
+          dengan persegi panjang atau belah ketupat berbeda. Selain itu, cara
+          menghitung rumus jajar genjang juga pastinya berbeda dengan persegi
+          panjang atau belah ketupat. Jadi, jangan sampai salah menggunakan
+          rumus untuk menghitungnya.
+        </p>
+        <h4>Definisi Jajar genjang</h4>
+        <p>
+          Jajar genjang adalah bangun datar bersegi empat yang memiliki sifat
+          khusus. Dalam jajar genjang, kedua pasang sisi yang berseberangan
+          sejajar dan memiliki panjang yang sama. Selain itu, kedua pasang
+          sudut yang berhadapan juga memiliki besar yang sama.
+        </p>
+        <h4>Karakteristik Jajar genjang</h4>
+        <ul>
+          <li>
+            <span>Jajar genjang : </span>merupakan bangun datar bersegi empat.
+          </li>
+          <li>
+            <span>Memiliki dua pasang sisi : </span> sejajar yang sama
+            panjang.
+          </li>
+          <li>
+            <span>Kedua pasang sudut : </span>yang berhadapan memiliki besar
+            yang sama.
+          </li>
+          <li>
+            <span>Sisi-sisi jajar genjang :</span>dapat bersilangan dengan
+            sudut 180 derajat.
+          </li>
+        </ul>
+        <h4>Sifat-sifat Jajar genjang</h4>
+        <ul>
+          <li>
+            Sisi-sisi yang berseberangan pada jajar genjang sejajar dan
+            memiliki panjang yang sama.
+          </li>
+          <li>Pasangan sudut yang berhadapan memiliki besar yang sama.</li>
+          <li>
+            Luas jajar genjang dapat dihitung dengan rumus luas = alas ×
+            tinggi.
+          </li>
+          <li>
+            Keliling jajar genjang adalah jumlah panjang semua sisinya, yaitu
+            keliling = 2 × (panjang sisi sejajar).
+          </li>
+        </ul>
+        <h4>Kesimpulan</h4>
+        <p>
+          Jajar genjang merupakan salah satu bangun datar yang penting dalam
+          matematika. Memahami sifat-sifat, rumus-rumus, dan penerapannya
+          dapat membantu dalam memecahkan berbagai masalah matematika maupun
+          dalam memahami dunia nyata di sekitar kita. Dengan pemahaman yang
+          baik tentang jajar genjang, kita dapat mengaplikasikan konsep ini
+          dalam berbagai bidang kehidupan.
+        </p>
+        <h4>Noted Rumus</h4>
+        <p>
+          K = Keliling
+          <br />
+          L = Luas
+          <br />
+          s = sisi
+          <br />
+          a = alas
+          <br />
+          t = tinggi
+        </p>
+      </div>
+    </section>
+    <section id="history">
+      <button>Remove history</button>
+      <div class="history"></div>
+    </section>
+  </main>
+  <!--  -->
+
+  <footer>
+    <p>
+      Created by
+      <a
+        href="https://www.instagram.com/fery.ramdania?igsh=MWhwZG96eHQxczZq"
+        target="_blank"
+        >Fery Ramdania.</a
+      >
+      | &copy; 2024.
+    </p>
+  </footer>
+  <script>
+    // ICON
+    feather.replace();
+    // -----
+
+    // BACK
+    document.querySelector("nav button").onclick = function () {
+      location.href = "https://xfry-1270.github.io/Hitbar/main/main.html";
+    };
+    // -----
+
+    // HISTORY
+    var memo = document.querySelector("#history .history");
+    var btnmemo = document.querySelector("#history button");
+    //-----
+
+    window.onload = function () {
+      var addmemo = localStorage.getItem("memo");
+      if (addmemo) {
+        memo.innerHTML = addmemo;
+      } else {
+        localStorage.removeItem("memo");
       }
-      body {
-        width: 100%;
-        height: 100vh;
-        display: flex;
-        flex-direction: column;
-        gap: 0.5rem;
-        justify-content: center;
-        align-items: center;
-        font-family: sans-serif;
-        background-color: #15f5ba;
-        color: white;
+    };
+
+    // KELILING
+    var inputKeliling = document.querySelectorAll(".keliling input");
+    var btnKeliling = document.querySelector(".keliling button");
+    var hasilKeliling = document.querySelector(".keliling span");
+
+    btnKeliling.onclick = function () {
+      if (
+        inputKeliling[0].value === "" ||
+        (inputKeliling[1].value === "") |
+          (inputKeliling[2].value === "") |
+          (inputKeliling[3].value === "")
+      ) {
+        alert("Isi input dengan nilai");
+      } else {
+        var angka1 = Number(inputKeliling[0].value);
+        var angka2 = Number(inputKeliling[1].value);
+        var angka3 = Number(inputKeliling[2].value);
+        var angka4 = Number(inputKeliling[3].value);
+        var resultAngka = angka1 + angka2 + angka3 + angka4;
+        const regex = /\d+/;
+        if (!regex.test(resultAngka)) {
+          alert("Input Nilai Bilangannya saja");
+        } else {
+          var memories = (hasilKeliling.textContent =
+            angka1 +
+            " + " +
+            angka2 +
+            " + " +
+            angka3 +
+            " + " +
+            angka4 +
+            " = " +
+            resultAngka);
+          inputKeliling[0].value = "";
+          inputKeliling[1].value = "";
+          inputKeliling[2].value = "";
+          inputKeliling[3].value = "";
+          var existingHTML = memo.innerHTML;
+          var newMemo =
+            `<div>History Keliling Jajar genjang <p><input type='checkbox' /> <span>K = ${memories}</span></p></div>` +
+            existingHTML;
+          memo.innerHTML = newMemo;
+          localStorage.setItem("memo", memo.innerHTML);
+        }
       }
-      a {
-        font-weight: bold;
-        text-decoration: none;
+    };
+    // -----
+
+    // LUAS
+    var inputLuas = document.querySelectorAll(".luas input");
+    var btnLuas = document.querySelector(".luas button");
+    var hasilLuas = document.querySelector(".luas span");
+
+    btnLuas.onclick = function () {
+      if (inputLuas[0].value === "" || inputLuas[1].value === "") {
+        alert("Isi input dengan nilai");
+      } else {
+        var angka1 = Number(inputLuas[0].value);
+        var angka2 = Number(inputLuas[1].value);
+        var result = angka1 * angka2;
+        const regex = /\d+/;
+        if (!regex.test(result)) {
+          alert("Input Nilai Bilangannya saja");
+        } else {
+          var memories = (hasilLuas.textContent =
+            angka1 + " x " + angka2 + " = " + result);
+          inputLuas[0].value = "";
+          inputLuas[1].value = "";
+          var existingHTML = memo.innerHTML;
+          var newMemo =
+            `<div>History Luas Jajar genjang <p><input type='checkbox' /> <span>L = ${memories}</span></p></div>` +
+            existingHTML;
+          memo.innerHTML = newMemo;
+          localStorage.setItem("memo", memo.innerHTML);
+        }
       }
-      a:hover {
-        color: salmon;
+    };
+    // -----
+
+    // DELETE HISTORY
+    btnmemo.onclick = function () {
+      var checkbox = document.querySelectorAll(
+        ".history input[type='checkbox']:checked"
+      );
+      if (checkbox.length === 0) {
+        alert("Pilih history yang mau dihapus terlebih dahulu 👌");
+      } else {
+        checkbox.forEach(function (cek) {
+          var delmemo = cek.closest("div");
+          delmemo.remove();
+        });
+        localStorage.setItem("memo", memo.innerHTML);
       }
-    </style>
-  </head>
-  <body>
-    <h1>COMING SOON</h1>
-    <a href="https://xfry-1270.github.io/Hitbar/main/main.html">B A C K</a>
-  </body>
+    };
+
+    // VALIDASI INPUT
+    inputKeliling[0].addEventListener("keyup", function regcek() {
+      const regex = /,/;
+      if (regex.test(inputKeliling[0].value)) {
+        alert("untuk tanda koma ( , ) ubah jadi titik ( . )");
+      }
+    });
+
+    inputKeliling[1].addEventListener("keyup", function regcek() {
+      const regex = /,/;
+      if (regex.test(inputKeliling[1].value)) {
+        alert("untuk tanda koma ( , ) ubah jadi titik ( . )");
+      }
+    });
+
+    inputLuas[0].addEventListener("keyup", function regcek() {
+      const regex = /,/;
+      if (regex.test(inputLuas[0].value)) {
+        alert("untuk tanda koma ( , ) ubah jadi titik ( . )");
+      }
+    });
+
+    inputLuas[1].addEventListener("keyup", function regcek() {
+      const regex = /,/;
+      if (regex.test(inputLuas[1].value)) {
+        alert("untuk tanda koma ( , ) ubah jadi titik ( . )");
+      }
+    });
+  </script>
+</body>
 </html>

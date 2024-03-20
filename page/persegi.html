@@ -66,6 +66,28 @@
           <button>Hitung</button>
           <p>Hasil : <span></span></p>
         </div>
+        <div class="sisi-k">
+          <h3>Sisi Persegi berdasarkan Keliling</h3>
+          <p>
+            Rumus :
+            <br />
+            S = s/4
+          </p>
+          <input type="text" placeholder="Nilai Keliling" />
+          <button>Hitung</button>
+          <p>Hasil : <span></span></p>
+        </div>
+        <div class="sisi-l">
+          <h3>Sisi Persegi berdasarkan Luas</h3>
+          <p>
+            Rumus :
+            <br />
+            S = √L
+          </p>
+          <input type="text" placeholder="Nilai Luas" />
+          <button>Hitung</button>
+          <p>Hasil : <span></span></p>
+        </div>
       </section>
 
       <section id="penjelasan">
@@ -205,7 +227,7 @@
 
             var existingHTML = memo.innerHTML;
             var newMemo =
-              `<div>History Keliling persegi <p><input type='checkbox' /> <span>${memories}</span></p></div>` +
+              `<div>History Keliling persegi <p><input type='checkbox' /> <span>K = ${memories}</span></p></div>` +
               existingHTML;
             memo.innerHTML = newMemo;
 
@@ -236,7 +258,69 @@
 
             var existingHTML = memo.innerHTML;
             var newMemo =
-              `<div>History Luas persegi <p><input type='checkbox' /> <span>${memories}</span></p></div>` +
+              `<div>History Luas persegi <p><input type='checkbox' /> <span>L = ${memories}</span></p></div>` +
+              existingHTML;
+            memo.innerHTML = newMemo;
+
+            localStorage.setItem("memo", memo.innerHTML);
+          }
+        }
+      };
+      // -----
+
+      // SISI persegi dari keliling
+      var inputSisiL = document.querySelector(".sisi-l input");
+      var btnSisiL = document.querySelector(".sisi-l button");
+      var hasilSisiL = document.querySelector(".sisi-l span");
+
+      btnSisiL.onclick = function () {
+        if (inputSisiL.value === "") {
+          alert("Isi input dengan nilai");
+        } else {
+          var angka = Number(inputSisiL.value);
+          var result = Math.sqrt(angka);
+          const regex = /\d+/;
+          if (!regex.test(result)) {
+            alert("Input Nilai Bilangannya saja");
+          } else {
+            var memories = (hasilSisiL.textContent =
+              "\u221A" + angka + " = " + result);
+            inputSisiK.value = "";
+
+            var existingHTML = memo.innerHTML;
+            var newMemo =
+              `<div>History Sisi Persegi berdasarkan Luas <p><input type='checkbox' /> <span>S = ${memories}</span></p></div>` +
+              existingHTML;
+            memo.innerHTML = newMemo;
+
+            localStorage.setItem("memo", memo.innerHTML);
+          }
+        }
+      };
+      // -----
+
+      // SISI persegi dari luas
+      var inputSisiK = document.querySelector(".sisi-k input");
+      var btnSisiK = document.querySelector(".sisi-k button");
+      var hasilSisiK = document.querySelector(".sisi-k span");
+
+      btnSisiK.onclick = function () {
+        if (inputSisiK.value === "") {
+          alert("Isi input dengan nilai");
+        } else {
+          var angka = Number(inputSisiK.value);
+          var result = angka / 4;
+          const regex = /\d+/;
+          if (!regex.test(result)) {
+            alert("Input Nilai Bilangannya saja");
+          } else {
+            var memories = (hasilSisiK.textContent =
+              angka + " / 4 = " + result);
+            inputSisiK.value = "";
+
+            var existingHTML = memo.innerHTML;
+            var newMemo =
+              `<div>History Sisi Persegi berdasarkan Keliling <p><input type='checkbox' /> <span>S = ${memories}</span></p></div>` +
               existingHTML;
             memo.innerHTML = newMemo;
 

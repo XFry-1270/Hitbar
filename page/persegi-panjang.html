@@ -50,8 +50,8 @@
             <br />
             K = 2 x (p + l)
           </p>
-          <input type="text" placeholder="Input nilai p / l" />
-          <input type="text" placeholder="Input nilai l / p" />
+          <input type="text" placeholder="Nilai p / l" />
+          <input type="text" placeholder="Nilai l / p" />
           <button>Hitung</button>
           <p>Hasil : <span></span></p>
         </div>
@@ -62,8 +62,8 @@
             <br />
             L = p x l
           </p>
-          <input type="text" placeholder="Input nilai p / l" />
-          <input type="text" placeholder="Input nilai l / p" />
+          <input type="text" placeholder="Nilai p / l" />
+          <input type="text" placeholder="Nilai l / p" />
           <button>Hitung</button>
           <p>Hasil : <span></span></p>
         </div>
@@ -181,10 +181,11 @@
         }
       };
 
+      // KELILING
       var inputKeliling = document.querySelectorAll(".keliling input");
       var btnKeliling = document.querySelector(".keliling button");
       var hasilKeliling = document.querySelector(".keliling span");
-      // KELILING
+
       btnKeliling.onclick = function () {
         if (inputKeliling[0].value === "" || inputKeliling[1].value === "") {
           alert("Isi input dengan nilai");
@@ -210,7 +211,7 @@
             inputKeliling[1].value = "";
             var existingHTML = memo.innerHTML;
             var newMemo =
-              `<div>History Keliling Persegi panjang <p><input type='checkbox' /> <span>${memories}</span></p></div>` +
+              `<div>History Keliling Persegi panjang <p><input type='checkbox' /> <span>K = ${memories}</span></p></div>` +
               existingHTML;
             memo.innerHTML = newMemo;
             localStorage.setItem("memo", memo.innerHTML);
@@ -241,7 +242,7 @@
             inputLuas[1].value = "";
             var existingHTML = memo.innerHTML;
             var newMemo =
-              `<div>History Luas Persegi panjang <p><input type='checkbox' /> <span>${memories}</span></p></div>` +
+              `<div>History Luas Persegi panjang <p><input type='checkbox' /> <span>L = ${memories}</span></p></div>` +
               existingHTML;
             memo.innerHTML = newMemo;
             localStorage.setItem("memo", memo.innerHTML);
