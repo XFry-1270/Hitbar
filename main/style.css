@@ -121,11 +121,11 @@ main img {
 footer {
   font-size: 0.7rem;
   font-weight: bold;
-  text-align: center;
   width: 100%;
-  position: fixed;
-  bottom: 0;
-  margin-bottom: 1rem;
+  display: flex;
+  padding-top: 1rem;
+  justify-content: center;
+  margin-top: 1.1rem;
   font-family: sans-serif;
   user-select: none;
 }

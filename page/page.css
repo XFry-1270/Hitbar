@@ -207,6 +207,77 @@ main section .sisi-k {
   color: var(---forth);
   font-weight: bolder;
 }
+#converter {
+  padding: 2.1rem 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+}
+#converter h3 {
+  text-align: center;
+  font-size: 1rem;
+  margin: 1rem 0.2rem;
+  font-family: "Montserrat", sans-serif;
+  user-select: none;
+}
+#converter .cv {
+  display: flex;
+  gap: 0.5rem;
+}
+#converter .cvp1 {
+  border-bottom: 2px dashed var(---forth);
+  padding: 0.5rem 0;
+}
+#converter .cv-btn {
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+}
+.cv-btn button {
+  padding: 0.3rem 1rem;
+  border-radius: 1rem;
+  font-weight: bold;
+  border-radius: 5px;
+  box-shadow: 3px 2px 0 0 black;
+}
+.cv-btn button:hover {
+  color: white;
+  background-color: var(---forth);
+}
+.cv-btn button:active {
+  box-shadow: none;
+  transform: translateX(0.6px) translateY(0.6px);
+}
+#converter select {
+  width: 100%;
+  height: 2rem;
+  font-family: initial;
+  font-weight: bolder;
+  text-align: center;
+  border-radius: 5px;
+  border: 2px solid var(---forth);
+  color: var(---forth);
+  transition: 0.5s;
+}
+#converter select:focus {
+  border: 2px solid var(---primary);
+  color: var(---primary);
+}
+#converter input {
+  width: 100%;
+  border: 2px solid black;
+  height: 2.5rem;
+  padding-left: 0.5rem;
+  margin: 0.5rem 0;
+  border-radius: 5px;
+  box-shadow: 3px 2px 0 0 black;
+}
+#converter input:focus {
+  box-shadow: 0 0 0 0;
+  background-color: var(---primary);
+  transform: translateX(0.5px) translateY(0.5px);
+}
 #history {
   padding: 0.5rem;
   display: flex;

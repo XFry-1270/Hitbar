@@ -1,26 +1,28 @@
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!-- FONT -->
-  <link
-    href="https://fonts.googleapis.com/css2?family=Madimi+One&display=swap"
-    rel="stylesheet"
-  />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Poppins&display=swap"
-    rel="stylesheet"
-  />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap"
-    rel="stylesheet"
-  />
-  <!--  -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- FONT -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Madimi+One&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!--  -->
 
-  <!-- ICON -->
-  <script src="https://unpkg.com/feather-icons"></script>
-  <!--  -->
-  <title>HITBAR</title>
-  <link rel="stylesheet" href="page.css" />
+    <!-- ICON -->
+    <script src="https://unpkg.com/feather-icons"></script>
+    <!--  -->
+    <title>HITBAR</title>
+    <link rel="stylesheet" href="page.css" />
   </head>
   <body>
     <!-- HEADER PART -->
@@ -31,6 +33,7 @@
         <button>Back</button>
         <div class="navbar">
           <a href="#kalkulator">Kalkulator</a>
+          <a href="#converter"><i data-feather="refresh-ccw"></i></a>
           <a href="#penjelasan">Penjelasan</a>
           <a href="#history"><i data-feather="clock"></i></a>
         </div>
@@ -48,7 +51,7 @@
             <br />
             K = 2π x r
           </p>
-          <input type="text" placeholder="Input nilai r" />
+          <input type="text" placeholder="nilai r" />
           <button>Hitung</button>
           <p>Hasil : <span></span></p>
         </div>
@@ -59,9 +62,79 @@
             <br />
             <i>A</i> = πr<sup>2</sup>
           </p>
-          <input type="text" placeholder="Input nilai r" />
+          <input type="text" placeholder="nilai r" />
           <button>Hitung</button>
           <p>Hasil : <span></span></p>
+        </div>
+      </section>
+
+      <section id="converter">
+        <div class="cvp1">
+          <h3>Konversi satuan panjang</h3>
+          <div class="cv">
+            <div class="cvin">
+              <select name="converter" id="cv">
+                <option value="km">Km</option>
+                <option value="hm">Hm</option>
+                <option value="dam">Dam</option>
+                <option value="m">M</option>
+                <option value="dm">Dm</option>
+                <option value="cm">Cm</option>
+                <option value="mm">Mm</option>
+              </select>
+              <input type="number" placeholder="Input nilai" />
+            </div>
+            <div class="cvout">
+              <select name="converter" id="cv">
+                <option value="km">Km</option>
+                <option value="hm">Hm</option>
+                <option value="dam">Dam</option>
+                <option value="m">M</option>
+                <option value="dm">Dm</option>
+                <option value="cm">Cm</option>
+                <option value="mm">Mm</option>
+              </select>
+
+              <input type="number" placeholder="Hasil " disabled />
+            </div>
+          </div>
+          <div class="cv-btn">
+            <button>Convert</button>
+          </div>
+        </div>
+
+        <div class="cvp2">
+          <h3>Konversi satuan panjang pangkat <sup>2</sup></h3>
+          <div class="cv">
+            <div class="cvin">
+              <select name="converter" id="cv">
+                <option value="km">Km2</option>
+                <option value="hm">Hm2</option>
+                <option value="dam">Dam2</option>
+                <option value="m">M2</option>
+                <option value="dm">Dm2</option>
+                <option value="cm">Cm2</option>
+                <option value="mm">Mm2</option>
+              </select>
+              <input type="number" placeholder="Input nilai" />
+            </div>
+            <div class="cvout">
+              <select name="converter" id="cv">
+                <option value="km">Km2</option>
+                <option value="hm">Hm2</option>
+                <option value="dam">Dam2</option>
+                <option value="m">M2</option>
+                <option value="dm">Dm2</option>
+                <option value="cm">Cm2</option>
+                <option value="mm">Mm2</option>
+              </select>
+
+              <input type="number" placeholder="Hasil " disabled />
+            </div>
+          </div>
+          <div class="cv-btn">
+            <button>Convert</button>
+          </div>
         </div>
       </section>
 
@@ -157,6 +230,7 @@
         | &copy; 2024.
       </p>
     </footer>
+    <script src="convert.js"></script>
     <script>
       // ICON
       feather.replace();
@@ -182,13 +256,24 @@
         }
       };
 
+      // KELILING
       var inputKeliling = document.querySelector(".keliling input");
       var btnKeliling = document.querySelector(".keliling button");
       var hasilKeliling = document.querySelector(".keliling span");
-      // KELILING
+      var pkeliling = document.querySelectorAll(".keliling p");
+
       btnKeliling.onclick = function () {
+        if (inputKeliling.value !== "") {
+          pkeliling[1].style.color = "#ff8080";
+          pnav[3].style.color = "#ff8080";
+          setTimeout(function () {
+            pkeliling[1].style.color = "black";
+            pnav[3].style.color = "#176b87";
+          }, 450);
+        }
+
         if (inputKeliling.value === "") {
-          alert("Isi input dengan nilai");
+          alert("Isi input dengan nilai 😊");
         } else {
           var angka = Number(inputKeliling.value);
           var lastResult = 2 * 3.14 * angka;
@@ -201,7 +286,7 @@
             inputKeliling.value = "";
             var existingHTML = memo.innerHTML;
             var newMemo =
-              `<div>History Keliling Lingkaran <p><input type='checkbox' /> <span>${memories}</span></p></div>` +
+              `<div>History Keliling Lingkaran <p><input type='checkbox' /> <span>K = ${memories}</span></p></div>` +
               existingHTML;
             memo.innerHTML = newMemo;
             localStorage.setItem("memo", memo.innerHTML);
@@ -214,10 +299,20 @@
       var inputLuas = document.querySelector(".luas input");
       var btnLuas = document.querySelector(".luas button");
       var hasilLuas = document.querySelector(".luas span");
+      var pluas = document.querySelectorAll(".luas p");
 
       btnLuas.onclick = function () {
+        if (inputLuas.value !== "") {
+          pluas[1].style.color = "#ff8080";
+          pnav[3].style.color = "#ff8080";
+          setTimeout(function () {
+            pluas[1].style.color = "black";
+            pnav[3].style.color = "#176b87";
+          }, 450);
+        }
+
         if (inputLuas.value === "") {
-          alert("Isi input dengan nilai");
+          alert("Isi input dengan nilai 😊");
         } else {
           var angka = Number(inputLuas.value);
           var result = angka * angka;
@@ -236,7 +331,7 @@
             inputLuas.value = "";
             var existingHTML = memo.innerHTML;
             var newMemo =
-              `<div>History Luas Lingkaran <p><input type='checkbox' /> <span>${memories}</span></p></div>` +
+              `<div>History Luas Lingkaran <p><input type='checkbox' /> <span><i>A</i> = ${memories}</span></p></div>` +
               existingHTML;
             memo.innerHTML = newMemo;
             localStorage.setItem("memo", memo.innerHTML);

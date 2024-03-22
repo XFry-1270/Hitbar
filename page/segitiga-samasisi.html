@@ -34,6 +34,7 @@
         <button>Back</button>
         <div class="navbar">
           <a href="#kalkulator">Kalkulator</a>
+          <a href="#converter"><i data-feather="refresh-ccw"></i></a>
           <a href="#penjelasan">Penjelasan</a>
           <a href="#history"><i data-feather="clock"></i></a>
         </div>
@@ -66,6 +67,76 @@
           <input type="text" placeholder="Nilai t / a" />
           <button>Hitung</button>
           <p>Hasil : <span></span></p>
+        </div>
+      </section>
+
+      <section id="converter">
+        <div class="cvp1">
+          <h3>Konversi satuan panjang</h3>
+          <div class="cv">
+            <div class="cvin">
+              <select name="converter" id="cv">
+                <option value="km">Km</option>
+                <option value="hm">Hm</option>
+                <option value="dam">Dam</option>
+                <option value="m">M</option>
+                <option value="dm">Dm</option>
+                <option value="cm">Cm</option>
+                <option value="mm">Mm</option>
+              </select>
+              <input type="number" placeholder="Input nilai" />
+            </div>
+            <div class="cvout">
+              <select name="converter" id="cv">
+                <option value="km">Km</option>
+                <option value="hm">Hm</option>
+                <option value="dam">Dam</option>
+                <option value="m">M</option>
+                <option value="dm">Dm</option>
+                <option value="cm">Cm</option>
+                <option value="mm">Mm</option>
+              </select>
+
+              <input type="number" placeholder="Hasil " disabled />
+            </div>
+          </div>
+          <div class="cv-btn">
+            <button>Convert</button>
+          </div>
+        </div>
+
+        <div class="cvp2">
+          <h3>Konversi satuan panjang pangkat <sup>2</sup></h3>
+          <div class="cv">
+            <div class="cvin">
+              <select name="converter" id="cv">
+                <option value="km">Km2</option>
+                <option value="hm">Hm2</option>
+                <option value="dam">Dam2</option>
+                <option value="m">M2</option>
+                <option value="dm">Dm2</option>
+                <option value="cm">Cm2</option>
+                <option value="mm">Mm2</option>
+              </select>
+              <input type="number" placeholder="Input nilai" />
+            </div>
+            <div class="cvout">
+              <select name="converter" id="cv">
+                <option value="km">Km2</option>
+                <option value="hm">Hm2</option>
+                <option value="dam">Dam2</option>
+                <option value="m">M2</option>
+                <option value="dm">Dm2</option>
+                <option value="cm">Cm2</option>
+                <option value="mm">Mm2</option>
+              </select>
+
+              <input type="number" placeholder="Hasil " disabled />
+            </div>
+          </div>
+          <div class="cv-btn">
+            <button>Convert</button>
+          </div>
         </div>
       </section>
 
@@ -149,6 +220,7 @@
         | &copy; 2024.
       </p>
     </footer>
+    <script src="convert.js"></script>
     <script>
       // ICON
       feather.replace();
@@ -173,14 +245,25 @@
           localStorage.removeItem("memo");
         }
       };
+
       // KELILING
       var inputKeliling = document.querySelector(".keliling input");
       var btnKeliling = document.querySelector(".keliling button");
       var hasilKeliling = document.querySelector(".keliling span");
+      var pkeliling = document.querySelectorAll(".keliling p");
 
       btnKeliling.onclick = function () {
+        if (inputKeliling.value !== "") {
+          pkeliling[1].style.color = "#ff8080";
+          pnav[3].style.color = "#ff8080";
+          setTimeout(function () {
+            pkeliling[1].style.color = "black";
+            pnav[3].style.color = "#176b87";
+          }, 450);
+        }
+
         if (inputKeliling.value === "") {
-          alert("Isi input dengan nilai");
+          alert("Isi input dengan nilai 😊");
         } else {
           var angka = Number(inputKeliling.value);
           var resultAngka = 3 * angka;
@@ -206,10 +289,20 @@
       var inputLuas = document.querySelectorAll(".luas input");
       var btnLuas = document.querySelector(".luas button");
       var hasilLuas = document.querySelector(".luas span");
+      var pluas = document.querySelectorAll(".luas p");
 
       btnLuas.onclick = function () {
+        if (inputLuas[0].value !== "" && inputLuas[1].value !== "") {
+          pluas[1].style.color = "#ff8080";
+          pnav[3].style.color = "#ff8080";
+          setTimeout(function () {
+            pluas[1].style.color = "black";
+            pnav[3].style.color = "#176b87";
+          }, 450);
+        }
+
         if (inputLuas[0].value === "" || inputLuas[1].value === "") {
-          alert("Isi input dengan nilai");
+          alert("Isi input dengan nilai 😊");
         } else {
           var angka1 = Number(inputLuas[0].value);
           var angka2 = Number(inputLuas[1].value);
