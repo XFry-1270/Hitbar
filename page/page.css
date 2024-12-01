@@ -122,6 +122,9 @@ main section .keliling {
 main section .sisi-k {
   border-bottom: 2px dashed black;
 }
+main section .jari2 {
+  border-bottom: 2px dashed black;
+}
 #kalkulator {
   overflow-y: auto;
 }
@@ -195,10 +198,16 @@ main section .sisi-k {
   font-family: sans-serif;
   margin: 1rem 0.5rem;
 }
-#penjelasan .artikel ul:nth-child(8) {
-  padding: 0.3rem;
-  list-style: square;
+#penjelasan .artikel ul:nth-child(4) {
+  list-style: circle;
   color: var(---forth);
+}
+#penjelasan .artikel ul:nth-child(6) {
+  padding: 0.3rem;
+  list-style: number;
+}
+#penjelasan .artikel ul:nth-child(10) {
+  list-style: square;
 }
 #penjelasan .artikel li {
   margin: 0.4rem 0;

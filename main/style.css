@@ -29,21 +29,15 @@ header h1 {
 }
 header nav {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   margin-top: 0.5rem;
-  padding: 0.2rem 0.5rem;
-}
-nav .search-box {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 0.5rem;
+  padding: 0.1rem 0.5rem;
 }
 header nav button {
   font-weight: bold;
   box-shadow: 2px 2px 0 0 black;
-  padding: 0.25rem;
+  padding: 0.25rem 1rem;
+  border-radius: 5px;
 }
 header nav button:hover {
   background-color: var(---primary);
@@ -51,19 +45,6 @@ header nav button:hover {
 header nav button:active {
   box-shadow: none;
   transform: translateX(0.6px) translateY(0.6px);
-}
-header nav input {
-  font-weight: bold;
-  border: 2px solid black;
-  padding: 0 0.5rem;
-  border-radius: 5px;
-  height: 2rem;
-  box-shadow: 3px 2px 0 0 black;
-}
-header nav input:focus {
-  box-shadow: 0 0 0 0;
-  background-color: var(---primary);
-  transform: translateX(0.5px) translateY(0.5px);
 }
 /* HEADER end */
 

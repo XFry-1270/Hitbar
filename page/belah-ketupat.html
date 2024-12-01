@@ -3,36 +3,373 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- FONT -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Madimi+One&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!--  -->
+
+    <!-- ICON -->
+    <script src="https://unpkg.com/feather-icons"></script>
+    <!--  -->
     <title>HITBAR</title>
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-      body {
-        width: 100%;
-        height: 100vh;
-        display: flex;
-        flex-direction: column;
-        gap: 0.5rem;
-        justify-content: center;
-        align-items: center;
-        font-family: sans-serif;
-        background-color: #15f5ba;
-        color: white;
-      }
-      a {
-        font-weight: bold;
-        text-decoration: none;
-      }
-      a:hover {
-        color: salmon;
-      }
-    </style>
+    <link rel="stylesheet" href="page.css" />
   </head>
   <body>
-    <h1>COMING SOON</h1>
-    <a href="https://xfry-1270.github.io/Hitbar/main/main.html">B A C K</a>
+    <!-- HEADER PART -->
+    <header>
+      <h1>HITBAR</h1>
+      <p>Belah ketupat</p>
+      <nav>
+        <button>Back</button>
+        <div class="navbar">
+          <a href="#kalkulator">Kalkulator</a>
+          <a href="#converter"><i data-feather="refresh-ccw"></i></a>
+          <a href="#penjelasan">Penjelasan</a>
+          <a href="#history"><i data-feather="clock"></i></a>
+        </div>
+      </nav>
+    </header>
+    <!--  -->
+
+    <!-- MAIN part -->
+    <main>
+      <section id="kalkulator">
+        <div class="keliling">
+          <h3>Keliling Belah ketupat</h3>
+          <p>
+            Rumus :
+            <br />
+            K = 4 x s
+          </p>
+          <input type="text" placeholder="Nilai s" />
+          <button>Hitung</button>
+          <p>Hasil : <span></span></p>
+        </div>
+        <div class="luas">
+          <h3>Luas Belah ketupat</h3>
+          <p>
+            Rumus :
+            <br />
+            L = <sup>1</sup>/<sub>2</sub> x d1 x d2
+          </p>
+          <input type="text" placeholder="Nilai d1" />
+          <input type="text" placeholder="Nilai d2" />
+          <button>Hitung</button>
+          <p>Hasil : <span></span></p>
+        </div>
+      </section>
+
+      <section id="converter">
+        <div class="cvp1">
+          <h3>Konversi satuan panjang</h3>
+          <div class="cv">
+            <div class="cvin">
+              <select name="converter" id="cv">
+                <option value="km">Km</option>
+                <option value="hm">Hm</option>
+                <option value="dam">Dam</option>
+                <option value="m">M</option>
+                <option value="dm">Dm</option>
+                <option value="cm">Cm</option>
+                <option value="mm">Mm</option>
+              </select>
+              <input type="number" placeholder="Input nilai" />
+            </div>
+            <div class="cvout">
+              <select name="converter" id="cv">
+                <option value="km">Km</option>
+                <option value="hm">Hm</option>
+                <option value="dam">Dam</option>
+                <option value="m">M</option>
+                <option value="dm">Dm</option>
+                <option value="cm">Cm</option>
+                <option value="mm">Mm</option>
+              </select>
+
+              <input type="number" placeholder="Hasil " disabled />
+            </div>
+          </div>
+          <div class="cv-btn">
+            <button>Convert</button>
+          </div>
+        </div>
+
+        <div class="cvp2">
+          <h3>Konversi satuan panjang pangkat <sup>2</sup></h3>
+          <div class="cv">
+            <div class="cvin">
+              <select name="converter" id="cv">
+                <option value="km">Km2</option>
+                <option value="hm">Hm2</option>
+                <option value="dam">Dam2</option>
+                <option value="m">M2</option>
+                <option value="dm">Dm2</option>
+                <option value="cm">Cm2</option>
+                <option value="mm">Mm2</option>
+              </select>
+              <input type="number" placeholder="Input nilai" />
+            </div>
+            <div class="cvout">
+              <select name="converter" id="cv">
+                <option value="km">Km2</option>
+                <option value="hm">Hm2</option>
+                <option value="dam">Dam2</option>
+                <option value="m">M2</option>
+                <option value="dm">Dm2</option>
+                <option value="cm">Cm2</option>
+                <option value="mm">Mm2</option>
+              </select>
+
+              <input type="number" placeholder="Hasil " disabled />
+            </div>
+          </div>
+          <div class="cv-btn">
+            <button>Convert</button>
+          </div>
+        </div>
+      </section>
+
+      <section id="penjelasan">
+        <div class="img">
+          <img src="/asset/belah ketupat.jpg" alt="belah ketupat" />
+        </div>
+        <div class="artikel">
+          <h2>Belah ketupat</h2>
+          <p>
+            Belah ketupat adalah sebuah bangun datar dua dimensi yang memiliki
+            empat sisi yang sama panjang dan dua pasang sudut yang berlawanan
+            yang sama besar. Bentuk ini sering dianggap sebagai bentuk khusus
+            dari jajaran genjang dan layang-layang.
+          </p>
+          <h4>Sifat-sifat Belah ketupat</h4>
+          <ul>
+            <li>Keempat sisinya sama panjang.</li>
+            <li>
+              Diagonal-diagonalnya saling berpotongan tegak lurus(membentuk
+              sudut 90 derajat) dan membagi dua diagonal lainnya sama panjang.
+            </li>
+            <li>
+              Setiap diagonal membagi belah ketupat menjadi dua segitiga
+              siku-siku yang sama besar.
+            </li>
+            <li>Sudut-sudut yang berlawanan sama besar.</li>
+          </ul>
+          <h4>Rumus-rumus penting</h4>
+          <ul>
+            <li><span>Keliling</span></li>
+            <p>K = 4 x s</p>
+            <p>Dimana s adalah panjang sisi belah ketupat.</p>
+            <li><span>Luas</span></li>
+            <p>L = 1/2 x d1 x d2</p>
+            <p>
+              Dimana d1 dan d2 adalah panjang diagonal-diagonal belah ketupat.
+            </p>
+          </ul>
+          <h4>Contoh Soal dan Penyelesaiannya</h4>
+          <ul>
+            <li>
+              <span>Soal 1:</span> Sebuah belah ketupat memiliki panjang sisi 10
+              cm. Berapakah kelilingnya?
+            </li>
+            <li>
+              <span>Penyelesaian:</span>
+              <p>K = 4 x s = 4 x 10 = 40cm</p>
+            </li>
+            <li>
+              <span>Soal 2:</span> Sebuah belah ketupat memiliki diagonal
+              masing-masing 12 cm dan 16 cm. Berapakah luasnya?
+            </li>
+            <li><span>Penyelesaian:</span></li>
+            <p>L = 1/2 x d1 x d2 = 1/2 x 12 x 16 = 96cm<sup>2</sup></p>
+          </ul>
+          <h4>Ciri-ciri Visual</h4>
+          <ul>
+            <li>
+              Belah ketupat sering digambarkan sebagai bentuk yang mirip dengan
+              layang-layang, namun semua sisinya sama panjang.
+            </li>
+            <li>
+              Diagonal-diagonalnya membentuk dua garis simetri yang saling tegak
+              lurus.
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section id="history">
+        <button>Remove history</button>
+        <div class="history"></div>
+      </section>
+    </main>
+    <!--  -->
+
+    <footer>
+      <p>
+        Created by
+        <a
+          href="https://www.instagram.com/fery.ramdania?igsh=MWhwZG96eHQxczZq"
+          target="_blank"
+          >Fery Ramdania.</a
+        >
+        | &copy; 2024.
+      </p>
+    </footer>
+    <script src="convert.js"></script>
+    <script>
+      // ICON
+      feather.replace();
+      // -----
+
+      // BACK
+      document.querySelector("nav button").onclick = function () {
+        location.href = "https://xfry-1270.github.io/Hitbar/main/main.html";
+      };
+      // -----
+
+      // HISTORY
+      var memo = document.querySelector("#history .history");
+      var btnmemo = document.querySelector("#history button");
+      //-----
+
+      window.onload = function () {
+        var addmemo = localStorage.getItem("memo");
+        if (addmemo) {
+          memo.innerHTML = addmemo;
+        } else {
+          localStorage.removeItem("memo");
+        }
+      };
+
+      // universal var
+      var pnav = document.querySelectorAll("header a");
+      // -----
+
+      // KELILING
+      var inputKeliling = document.querySelector(".keliling input");
+      var btnKeliling = document.querySelector(".keliling button");
+      var hasilKeliling = document.querySelector(".keliling span");
+      var pkeliling = document.querySelectorAll(".keliling p");
+
+      btnKeliling.onclick = function () {
+        if (inputKeliling.value !== "") {
+          pkeliling[1].style.color = "#ff8080";
+          pnav[3].style.color = "#ff8080";
+          setTimeout(function () {
+            pkeliling[1].style.color = "black";
+            pnav[3].style.color = "#176b87";
+          }, 450);
+        }
+
+        if (inputKeliling.value === "") {
+          alert("Isi input dengan nilai 😊");
+        } else {
+          var angka = Number(inputKeliling.value);
+          var result = angka * 4;
+          const regex = /\d+/;
+          if (!regex.test(result)) {
+            alert("Input Nilai Bilangannya saja");
+          } else {
+            var memories = (hasilKeliling.textContent =
+              "4 x " + angka + " = " + result);
+            inputKeliling.value = "";
+            var existingHTML = memo.innerHTML;
+            var newMemo =
+              `<div>History Keliling Belah ketupat <p><input type='checkbox' /> <span>K = ${memories}</span></p></div>` +
+              existingHTML;
+            memo.innerHTML = newMemo;
+            localStorage.setItem("memo", memo.innerHTML);
+          }
+        }
+      };
+      // -----
+
+      // LUAS
+      var inputLuas = document.querySelectorAll(".luas input");
+      var btnLuas = document.querySelector(".luas button");
+      var hasilLuas = document.querySelector(".luas span");
+      var pluas = document.querySelectorAll(".luas p");
+
+      btnLuas.onclick = function () {
+        if (inputLuas[0].value !== "" && inputLuas[1].value !== "") {
+          pluas[1].style.color = "#ff8080";
+          pnav[3].style.color = "#ff8080";
+          setTimeout(function () {
+            pluas[1].style.color = "black";
+            pnav[3].style.color = "#176b87";
+          }, 450);
+        }
+
+        if (inputLuas[0].value === "" || inputLuas[1].value === "") {
+          alert("Isi input dengan nilai 😊");
+        } else {
+          var angka1 = Number(inputLuas[0].value);
+          var angka2 = Number(inputLuas[1].value);
+          var result = 0.5 * angka1 * angka2;
+          const regex = /\d+/;
+          if (!regex.test(result)) {
+            alert("Input Nilai Bilangannya saja");
+          } else {
+            var memories = (hasilLuas.textContent =
+              " 1/2 x " + angka1 + " x " + angka2 + " = " + result);
+            inputLuas[0].value = "";
+            inputLuas[1].value = "";
+            var existingHTML = memo.innerHTML;
+            var newMemo =
+              `<div>History Luas Belah ketupat <p><input type='checkbox' /> <span>L = ${memories}</span></p></div>` +
+              existingHTML;
+            memo.innerHTML = newMemo;
+            localStorage.setItem("memo", memo.innerHTML);
+          }
+        }
+      };
+      // -----
+
+      // DELETE HISTORY
+      btnmemo.onclick = function () {
+        var checkbox = document.querySelectorAll(
+          ".history input[type='checkbox']:checked"
+        );
+        if (checkbox.length === 0) {
+          alert("Pilih history yang mau dihapus terlebih dahulu 👌");
+        } else {
+          checkbox.forEach(function (cek) {
+            var delmemo = cek.closest("div");
+            delmemo.remove();
+          });
+          localStorage.setItem("memo", memo.innerHTML);
+        }
+      };
+
+      // VALIDASI INPUT
+      inputKeliling.addEventListener("keyup", function regcek() {
+        const regex = /,/;
+        if (regex.test(inputKeliling.value)) {
+          alert("untuk tanda koma ( , ) ubah jadi titik ( . )");
+        }
+      });
+
+      inputLuas[0].addEventListener("keyup", function regcek() {
+        const regex = /,/;
+        if (regex.test(inputLuas[0].value)) {
+          alert("untuk tanda koma ( , ) ubah jadi titik ( . )");
+        }
+      });
+
+      inputLuas[1].addEventListener("keyup", function regcek() {
+        const regex = /,/;
+        if (regex.test(inputLuas[1].value)) {
+          alert("untuk tanda koma ( , ) ubah jadi titik ( . )");
+        }
+      });
+    </script>
   </body>
 </html>

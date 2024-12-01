@@ -21,3 +21,9 @@ HITBAR adalah sebuah web yang dapat membantu untuk menghitung luas ,keliling dan
 
   - Add new slide "Konversi satuan panjang" to all unlock page
   - Repair the css styling
+
+  🛑 Update 1.3
+
+  - Unlock page BELAH KETUPAT
+  - Pembaruan materi
+  - Repair the css styling
