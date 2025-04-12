@@ -27,3 +27,7 @@ HITBAR adalah sebuah web yang dapat membantu untuk menghitung luas ,keliling dan
   - Unlock page BELAH KETUPAT
   - Pembaruan materi
   - Repair the css styling
+
+  🛑 Update 1.4
+
+  - Update Page Jajar genjang & Belah ketupat
